@@ -1,0 +1,11 @@
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\bin\Debug\netcoreapp2.0\MetricsCore.deps.json
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\bin\Debug\netcoreapp2.0\MetricsCore.runtimeconfig.json
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\bin\Debug\netcoreapp2.0\MetricsCore.runtimeconfig.dev.json
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\bin\Debug\netcoreapp2.0\MetricsCore.dll
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\bin\Debug\netcoreapp2.0\MetricsCore.pdb
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\obj\Debug\netcoreapp2.0\MetricsCore.csproj.CoreCompileInputs.cache
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\obj\Debug\netcoreapp2.0\MetricsCore.AssemblyInfoInputs.cache
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\obj\Debug\netcoreapp2.0\MetricsCore.AssemblyInfo.cs
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\obj\Debug\netcoreapp2.0\MetricsCore.dll
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\obj\Debug\netcoreapp2.0\MetricsCore.pdb
+C:\Users\dintakut\Desktop\Edu\Projects\MetricsCore\obj\Debug\netcoreapp2.0\MetricsCore.csprojResolveAssemblyReference.cache

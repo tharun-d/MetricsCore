@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "UploadToServer";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<script>
+        function validation() {
+
+            var UploadedFile = document.getElementById("files").value;
+            var fup = document.getElementById('files');
+            var fileNam = fup.value;
+            var ext = fileNam.substring(fileNam.lastIndexOf('.') + 1);
+
+            document.getElementById("val").style.visibility = "hidden"
+
+            if (UploadedFile == "") {
+                document.getElementById("val").innerText = "please upload the file";
+                document.getElementById("val").style.visibility = "visible"
+                return false;
+            }
+            else if (ext != "xlsx") {
+
+
+                document.getElementById("val").innerText = "file should be in excel format only";
+                document.getElementById("val").style.visibility = "visible"
+                return false;
+
+
+            }
+
+            else {
+                return true;
+            }
+        }
+</script>
+<div class="form">
+    @using (Html.BeginForm("UploadToServer", "Metrics", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "return validation()" }))
+    {
+        <div>
+       
+            <h4>Please browse the Metrics File to Upload</h4>
+            <input type="file" id="files" name="files" multiple="multiple" /><br />
+            <input type="submit" value="Upload" />
+            <label id="val" style="visibility:hidden;color:red;float:right"></label>
+            @ViewBag.Message
+        </div>
+    }
+</div>
