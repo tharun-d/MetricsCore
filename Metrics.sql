@@ -15,7 +15,7 @@ AssignedTo varchar(max),
 Validationf varchar(max)
 )
 
-
+GO
 alter procedure InsertIntoEmployeeDetails
 (
 @EmployeeName varchar(max),
@@ -33,6 +33,7 @@ as
 begin
 insert into EmployeeDetails values(@EmployeeName,@ApplicationName,@TaskDescription,@TaskClassification,@AssignedDate,@CompletedDate,@EffortHours,@StatusOfTask,@AssignedTo,@Validationf)
 end
+GO
 
 create table vacationDates
 (
@@ -42,8 +43,9 @@ EndDate varchar(max),
 NumberOfDates int,
 Weekend varchar(max) null
 )
-drop table vacationDates
 
+drop table vacationDates
+GO
 alter procedure insertintovacationDates
 (
 @EmployeeName varchar(max),
@@ -65,6 +67,7 @@ MetricsHours int,
 CatwHours int
 )
 
+GO
 
 create procedure insertintoFillHoursTable
 (
@@ -77,6 +80,8 @@ begin
 insert into FillHoursTable values(@EmployeeName,@MetricsHours,@CatwHours)
 end
 
+GO
+
 create procedure insertintoFillHoursTableNoMetrics
 (
 @EmployeeName varchar(max)
@@ -85,6 +90,8 @@ as
 begin
 insert into FillHoursTable values(@EmployeeName,0,0)
 end
+
+GO
 
 create procedure UpdateFillHoursTable(@EmployeeName varchar(max),@CatwHours int)as
 begin
@@ -99,12 +106,15 @@ delete from vacationDates
 select * from FillHoursTable
 delete from FillHoursTable
 
+GO
+
 create procedure GettingMissMathedEmployees as
 begin
 select * from FillHoursTable fh
 where fh.MetricsHours!=fh.CatwHours
 end
 
+GO
 
 alter procedure DeleteMetrics as
 begin
@@ -113,10 +123,14 @@ delete from vacationDates
 delete from FillHoursTable
 end
 
+GO
+
 alter procedure statussheet as begin
 select distinct ed.EmployeeName,ApplicationName,CatwHours from EmployeeDetails ed,FillHoursTable ft
 where ed.EmployeeName=ft.EmployeeName
 end
+
+GO
 
 alter procedure teamleavedetails as begin
 select distinct ed.ApplicationName,vd.EmployeeName,cast(vd.StartDate as date) as StartDate,cast(vd.EndDate as date) as EndDate,vd.NumberOfDates,vd.Weekend
