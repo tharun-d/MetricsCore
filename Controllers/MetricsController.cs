@@ -28,7 +28,7 @@ namespace MetricsCore.Controllers
         public ActionResult UploadToServer(IList<IFormFile> files)
         {
             ViewBag.Message = null;
-            string _path = @"C:\Users\dintakut\Desktop\Mar metrics\Mar metrics\";
+            string _path = @"C:\Users\dintakut\Desktop\Apr Metrics\";
             int j;
 
             try
@@ -200,7 +200,7 @@ namespace MetricsCore.Controllers
         }
         public string Weekend(int startDate, int EndDate)
         {
-            int[] Dates = new int[] { 3, 4, 10, 11, 17, 18, 24, 25,31 };
+            int[] Dates = new int[] { 1,7,8,14,15,21,22,28,29 };
             int sd = startDate;
             int tsd = startDate;
             int ed = EndDate;
@@ -233,7 +233,7 @@ namespace MetricsCore.Controllers
         }
         public int TotalHolidays(int startDate, int EndDate)
         {
-            int[] Dates = new int[] { 3, 4, 10, 11, 17, 18, 24, 25 ,31};
+            int[] Dates = new int[] {1,7,8,14,15,21,22,28,29};
             int sd = startDate;
             int tsd = startDate;
             int ed = EndDate;

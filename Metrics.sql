@@ -137,3 +137,11 @@ select distinct ed.ApplicationName,vd.EmployeeName,cast(vd.StartDate as date) as
 from vacationDates vd,EmployeeDetails ed
 where vd.EmployeeName=ed.EmployeeName
 end
+
+GO
+
+CREATE PROCEDURE Metrics as BEGIN
+SELECT ApplicationName,TaskDescription,TaskClassification,cast(AssignedDate as date) as StartDate,cast(CompletedDate as date) as EndDate,EffortHours,StatusOfTask,AssignedTo FROM EmployeeDetails
+end
+
+Go
