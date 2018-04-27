@@ -128,6 +128,7 @@ GO
 alter procedure statussheet as begin
 select distinct ed.EmployeeName,ApplicationName,CatwHours from EmployeeDetails ed,FillHoursTable ft
 where ed.EmployeeName=ft.EmployeeName
+order by ed.EmployeeName
 end
 
 GO
@@ -136,12 +137,14 @@ alter procedure teamleavedetails as begin
 select distinct ed.ApplicationName,vd.EmployeeName,cast(vd.StartDate as date) as StartDate,cast(vd.EndDate as date) as EndDate,vd.NumberOfDates,vd.Weekend
 from vacationDates vd,EmployeeDetails ed
 where vd.EmployeeName=ed.EmployeeName
+order by vd.EmployeeName
 end
 
 GO
 
-CREATE PROCEDURE Metrics as BEGIN
+alter PROCEDURE Metrics as BEGIN
 SELECT ApplicationName,TaskDescription,TaskClassification,cast(AssignedDate as date) as StartDate,cast(CompletedDate as date) as EndDate,EffortHours,StatusOfTask,AssignedTo FROM EmployeeDetails
+order by AssignedTo
 end
 
 Go
